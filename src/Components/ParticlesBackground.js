@@ -1,6 +1,6 @@
 // ParticlesBackground.js
 import React, { useEffect, useRef } from "react";
-import Particles from "particlesjs";
+import Particles from "react-tsparticles";
 
 const ParticlesBackground = () => {
   const canvasRef = useRef(null);
