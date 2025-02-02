@@ -1,0 +1,415 @@
+/* General Styling */
+home body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+body.dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Home Container Styling */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 20px;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Intro Text Styling */
+.home-intro-text {
+    width: 50%;
+    text-align: left;
+}
+
+.home-hello-text {
+    margin-top: 25%;
+    font-size: 1.2em;
+    color: teal;
+    margin-left: 10%;
+    margin-bottom: -23px;
+
+}
+
+.home-i-am-text {
+    font-weight: 500;
+    height: 10%;
+    margin: 0;
+    font-size: 3.5em;
+    color: black;
+    margin-bottom: -12px;
+}
+
+.home-text-hari {
+    color: teal;
+}
+
+.home-text-sai {
+    color: coral;
+}
+
+.home-short-description {
+    color: coral;
+    font-weight: 10;
+    width: 140%;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    z-index: 2;
+    padding: 4px;
+    margin-bottom: 45px;
+}
+
+.home-typing-container {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    width: 100%;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: 0;
+}
+
+.home-a-text {
+    font-size: 2.6em;
+    color: teal;
+}
+
+.home-typing-text {
+    margin-top: 9px;
+    font-size: 2.2em;
+    margin-left: 10px;
+    color: coral;
+}
+
+body.dark-theme .home-hello-text {
+    color: coral;
+}
+
+body.dark-theme .home-i-am-text {
+    color: white;
+}
+
+body.dark-theme .home-text-hari {
+    color: coral;
+}
+
+body.dark-theme .home-text-sai {
+    color: teal;
+}
+
+body.dark-theme .home-short-description {
+    color: teal;
+}
+
+body.dark-theme .home-a-text {
+    color: coral;
+}
+
+body.dark-theme .home-footer {
+    color: coral;
+}
+
+body.dark-theme .home-typing-text {
+    color: teal;
+}
+
+/* Action Buttons */
+.home-icon-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    align-items: left;
+}
+
+.home-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 6px;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-left: 25px;
+    width: 43px;
+    height: 43px;
+    box-shadow: 1px 0px 8px 3px rgba(255, 127, 80, 0.5);
+    transform: translateZ(0);
+}
+
+.home-icon i {
+    font-size: 2em;
+    color: teal;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.home-icon span {
+    position: absolute;
+    left: 40px;
+    opacity: 0;
+    padding: 0px 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    white-space: nowrap;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 0.9em;
+    z-index: 1;
+}
+
+.home-icon:hover span {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+.home-icon:hover {
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+.home-icon:hover~.home-icon {
+    transform: translateX(60px);
+}
+
+.home-hari {
+    margin: 0;
+    text-align: center;
+    text-shadow: 1px 1px 4px teal;
+}
+
+.home-footer {
+    font-size: 0.9em;
+    width: 90%;
+    text-align: center;
+    margin-bottom: -63px;
+    color: teal;
+}
+
+/* Image Container */
+.home-image-container {
+    margin-left: 50%;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 1px 0px 8px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Continuous Laptop Emoji Vibration with 1 second pause */
+.home-emoji {
+    font-size: 70%;
+    display: inline-block;
+    animation: vibrate 0.3s ease-in-out 1s infinite;
+    /* Adds a 1s pause before each vibration cycle */
+    transform-origin: center;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+body.light-theme .home-image-container {
+    box-shadow: 1px 0px 8px 3px rgba(9, 243, 243, 0.555);
+}
+
+body.dark-theme .home-image-container {
+    box-shadow: 1px 0px 8px 3px rgba(255, 127, 80, 0.299);
+}
+
+.home-image-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.home-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+.home-imgcontainer {
+    margin-top: 6%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    text-align: center;
+}
+
+/* Continue to about */
+.home-continue-to-about {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-top: 15px;
+    cursor: pointer;
+    position: relative;
+    margin-right: -132px;
+}
+
+.home-continue-to-about p {
+    font-size: 1rem;
+    margin-left: 100px;
+    color: teal;
+    text-align: right;
+}
+
+.home-arrow-svg {
+    margin-top: 11px;
+    width: 30px;
+    height: 30px;
+    fill: coral;
+    animation: home-moveRight 1s infinite;
+    margin-left: 10px;
+}
+
+/* Animation for the arrow moving to the right */
+@keyframes home-moveRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1180px) {
+    .home-container {
+        margin-top: 33px;
+        overflow: hidden;
+    }
+
+    .home-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 65px;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .home-intro-text {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .home-hello-text {
+        margin: -5%;
+        margin-left: 71px;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .home-image-container {
+        width: 200px;
+        height: 200px;
+        margin-left: 40px;
+    }
+
+    .home-imgcontainer {
+        justify-content: center;
+    }
+
+    .home-typing-container {
+        margin-left: 61px;
+        text-align: center;
+        font-size: 70%;
+    }
+
+    .home-i-am-text {
+        margin-bottom: 5px;
+    }
+
+    .home-i-am-text,
+    .home-a-text,
+    .home-typing-text {
+        font-size: 2.5em;
+    }
+
+    .home-short-description {
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .home-continue-to-about {
+        justify-content: flex-end;
+        margin-top: auto;
+        margin-right: 10px;
+        font-size: 0.6rem;
+        position: absolute;
+        bottom: 27px;
+        right: 20px;
+    }
+
+    .home-footer {
+        font-size: 0.7em;
+        width: 100%;
+        text-align: center;
+        margin-bottom: -15px;
+        justify-content: flex-end;
+    }
+
+    .home-icon-container {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .home-icon {
+        width: 35px;
+        height: 35px;
+        margin-left: 15px;
+    }
+
+    .home-icon i {
+        font-size: 1.5em;
+    }
+}
