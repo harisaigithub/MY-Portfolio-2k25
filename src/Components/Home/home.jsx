@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import ParticlesBackground from '../ParticlesBackground'; 
+// import ParticlesBackground from '../ParticlesBackground'; 
 import "./home.css";
 import "../../index.css";
 import { useNavigate } from "react-router-dom";
@@ -105,7 +105,7 @@ function Home() {
         />
       </Helmet>
 
-      <ParticlesBackground />
+      {/* <ParticlesBackground /> */}
       
       <div className="home-content">
         <div className="home-intro-text">

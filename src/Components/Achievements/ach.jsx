@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-import ParticlesBackground from "../ParticlesBackground";
+// import ParticlesBackground from "../ParticlesBackground";
 import "./ach.css";
 import "../../index.css";
 
@@ -78,7 +78,7 @@ function Achievements() {
         />
       </Helmet>
       
-      <ParticlesBackground />
+      {/* <ParticlesBackground /> */}
 
       <div className="accomplishments-title">Achievements</div>
       <div className="accomplishments-content">

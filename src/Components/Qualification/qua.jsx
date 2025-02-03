@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-import ParticlesBackground from "../ParticlesBackground";
+// import ParticlesBackground from "../ParticlesBackground";
 import "./qua.css";
 import "../../index.css";
 import AVG from "./skills/angular.svg";
@@ -29,7 +29,7 @@ function Home() {
         {/* Other font links */}
       </Helmet>
 
-      <ParticlesBackground />
+      {/* <ParticlesBackground /> */}
       
       <div className="qua-home-content">
         <div className="qua-home-imgcontainer">

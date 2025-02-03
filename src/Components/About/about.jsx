@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import ParticlesBackground from "../ParticlesBackground";
+// import ParticlesBackground from "../ParticlesBackground";
 import TTIMG from "./logo11.png";
 import { Helmet } from "react-helmet";
 import "../../index.css";
@@ -54,7 +54,7 @@ const About = () => {
         />
       </Helmet>
 
-      <ParticlesBackground />
+      {/* <ParticlesBackground /> */}
       
       <div className="header-placeholder"></div>
       <div style={{ fontFamily: "Agbalumo, sans-serif" }} className="aboutme">

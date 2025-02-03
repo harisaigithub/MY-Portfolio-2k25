@@ -1,25 +1,23 @@
-// ParticlesBackground.js
 import React, { useEffect, useRef } from "react";
-import Particles from "react-tsparticles";
+import Particles from "particles.js"; // Ensure the correct import
 
 const ParticlesBackground = () => {
   const canvasRef = useRef(null);
 
   const initializeParticles = (theme) => {
     if (canvasRef.current) {
-      // Clear previous particles if any exist
       const canvasElement = canvasRef.current;
-      canvasElement.innerHTML = ""; // Remove all previous particles
+      canvasElement.innerHTML = ""; // Clear any previous particles if necessary
 
-      // Reinitialize particles
+      // Reinitialize particles with particles.js
       Particles.init({
-        selector: ".particles-background",
+        selector: ".particles-background",  // Make sure the selector is correct
         maxParticles: 100,
         connectParticles: true,
-        speed: 1, // Set constant speed
+        speed: 1, // Set particle speed
         minDistance: 100,
         sizeVariations: 3,
-        color: theme === "dark-theme" ? "#ffffff" : "#000000",
+        color: theme === "dark-theme" ? "#ffffff" : "#000000", // Change color based on theme
         shape: "circle",
         opacity: {
           value: 0.5,
@@ -32,7 +30,7 @@ const ParticlesBackground = () => {
         line_linked: {
           enable: true,
           distance: 100,
-          color: theme === "dark-theme" ? "#ffffff" : "#000000",
+          color: theme === "dark-theme" ? "#ffffff" : "#000000", // Line color based on theme
         },
         interactivity: {
           events: {
@@ -68,9 +66,9 @@ const ParticlesBackground = () => {
 
     // Cleanup observer on unmount
     return () => themeObserver.disconnect();
-  }, []);
+  }, []);  // Only run once on mount (componentDidMount)
 
-  return <canvas ref={canvasRef} className="particles-background"></canvas>;
+  return <canvas ref={canvasRef} className="particles-background"></canvas>;  // Attach canvas to ref
 };
 
 export default ParticlesBackground;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-import ParticlesBackground from "../ParticlesBackground";
+// import ParticlesBackground from "../ParticlesBackground";
 import "./exp.css";
 import "../../index.css";
 // import CYBS from "./immg/cybs.webp";
@@ -56,7 +56,7 @@ function Experience() {
         />
       </Helmet>
       
-      <ParticlesBackground />
+      {/* <ParticlesBackground /> */}
 
       <div className="exp-title">Experience</div>
       <div className="exp-content">
