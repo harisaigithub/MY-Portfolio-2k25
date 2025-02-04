@@ -1,18 +1,16 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import { loadSlim } from "@tsparticles/slim"; // loadSlim for optimized performance
 
 const ParticlesComponent = (props) => {
-  const [init, setInit] = useState(false);
-
   // This effect is triggered once when the component mounts
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine); // Load optimized slim version of particles.js
     }).then(() => {
-      setInit(true);
+      // We no longer need to manage 'init' state, so we can remove the setInit function.
     });
-  }, []);
+  }, []); // No need to add 'setInit' here because it's not used
 
   const particlesLoaded = (container) => {
     console.log(container); // For debugging
