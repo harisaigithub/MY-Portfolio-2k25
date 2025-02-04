@@ -6,8 +6,8 @@ import About from './Components/About/about';
 import Qualification from './Components/Qualification/qua'; 
 import Projects from './Components/Projects/pro';
 import Experience from './Components/Experience/exp'; 
-import Achievements from './Components/Achievements/ach'; 
-// import ParticlesBackground from './Components/ParticlesBackground';
+import Achievements from './Components/Achievements/ach';
+import ParticlesComponent from "./Components/ParticlesBackground";
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
@@ -34,7 +34,7 @@ function App() {
   return (
     <Router>
       <Navbar isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
-      {/* <ParticlesBackground theme={isDarkTheme ? 'dark-theme' : 'light-theme'} /> */}
+      <ParticlesComponent id="particles" isDarkTheme={isDarkTheme} />  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -42,7 +42,7 @@ function App() {
         <Route path="/projects" element={<Projects />} /> 
         <Route path="/experience" element={<Experience />} />
         <Route path="/achievements" element={<Achievements />} />
-      </Routes>
+        </Routes>
     </Router>
   );
 }
