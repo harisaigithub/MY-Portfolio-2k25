@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim"; // loadSlim for optimized performance
 
 const ParticlesComponent = (props) => {
-  const [setInit] = useState(false);
+  const [init, setInit] = useState(false);
 
   // This effect is triggered once when the component mounts
   useEffect(() => {
