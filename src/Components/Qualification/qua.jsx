@@ -1,7 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-// import ParticlesBackground from "../ParticlesBackground";
 import "./qua.css";
 import "../../index.css";
 import AVG from "./skills/angular.svg";
@@ -21,16 +19,6 @@ function Home() {
 
   return (
     <div className="qua-home-container">
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Agbalumo:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        {/* Other font links */}
-      </Helmet>
-
-      {/* <ParticlesBackground /> */}
-      
       <div className="qua-home-content">
         <div className="qua-home-imgcontainer">
           {/* Education Section */}
@@ -139,7 +127,7 @@ function Home() {
         style={{ fontFamily: "Alegreya SC, sans-serif" }}
         className="qua-home-footer"
       >
-        "This template is made with ❤️ by HARI SAI PARASA © 2024 💻 (✿◕‿◕✿)"
+        "This template is made with ❤️ by HARI SAI PARASA © 2025 💻 (✿◕‿◕✿)"
       </div>
     </div>
   );

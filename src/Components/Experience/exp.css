@@ -1,6 +1,5 @@
-/* General Styling */
+/* General Container */
 .exp-container {
-  margin-top: 35px;
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -8,167 +7,267 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+  background: transparent;
 }
 
-/* Theme Styles */
-body.light-theme {
-  background-color: #f0f0f0;
-  color: #000;
+/* Title */
+.exp-title {
+  font-size: 45px;
+  font-weight:500;
+  font-family: "Eczar", serif;
+  /* Updated font */
+  color:  rgb(241, 92, 37);
+  /* Updated Light Theme Color */
+  text-align: center;
+  margin-top: 100px;
 }
 
-body.dark-theme {
-  background-color: #000;
+/* Dark Mode */
+body.dark-theme .exp-title {
+  color: rgba(20, 233, 248, 0.733);
+  /* Keeping original color */
+}
+
+/* Project Grid */
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Project Card */
+.exp-column {
+  border: 1px solid rgba(0, 0, 0, 0.288);
+  border-radius: 12px;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+/* Hover Effect */
+.exp-column:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+/* Dark Mode */
+body.dark-theme .exp-column {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.288);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .exp-column:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(189, 187, 187, 0.582);
+}
+
+/* Project Image */
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Project Details */
+.exp-card-content {
+  padding: 15px;
+}
+
+/* Project Title */
+.exp-card-title {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  /* Updated font */
+  color: #430bac;
+  /* Light Theme: Dark Blue-Grey */
+}
+
+/* Dark Mode */
+body.dark-theme .exp-card-title {
+  color: rgba(248, 225, 20, 0.733);
+  /* Keeping original color */
+}
+
+/* Project Duration */
+.exp-card-date {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  /* Updated font */
+  color: #5a0280;
+  /* Light Theme Ocean Green */
+}
+
+/* Dark Mode */
+body.dark-theme .exp-card-date {
+  color: #12f3b0;
+  /* Dark Theme: Deep Orange */
+}
+
+/* Description */
+.exp-card-desc {
+  font-size: 17px;
+  margin-bottom: 10px;
+  font-family: "Crimson Pro", serif;
+  /* Updated font */
+  color: #2e373f;
+  /* Updated Medium Gray */
+}
+
+/* Dark Mode */
+body.dark-theme .exp-card-desc {
+  color: #ecf0f1;
+  /* Updated Soft White */
+}
+
+/* Issued By Text */
+.exp-card-org {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Alegreya SC", serif;
+  /* Updated font */
+  color: #8e44ad;
+  /* Updated Issued By Color */
+}
+
+/* Issued By Text */
+.exp-card-org span {
+  color: #0069bf;
+  /* Updated Issued By Color */
+}
+
+/* Dark Mode */
+body.dark-theme .exp-card-org {
+  color: #f39c12;
+  /* Dark Theme: Golden Yellow */
+}
+
+/* Tags */
+.exp-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.exptag {
+  background-color: #595bb66e;
+  /* Updated Dark Blue */
+  color: rgb(0, 0, 0);
+  /* Updated Text Color */
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 5px;
+  font-family: "Space Grotesk", sans-serif;
+  /* Updated font */
+}
+
+/* First Tag - Primary Color */
+.exptag-primary {
+  background-color: teal;
+  color: #000000;
+}
+
+
+/* Dark Mode */
+body.dark-theme .exptag {
+  background-color: #b9292942;
+  /* Updated Bright Blue */
+  font-weight: 500;
   color: #fff;
 }
 
-/* Exp Content */
-.exp-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
-  text-align: center;
-}
-
-.exp-title {
-  font-size: 35px;
-  color: coral;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4%;
-  height: 80px;
-}
-
-body.dark-theme .exp-title {
-  color: teal;
-}
-
-/* Exp Grid */
-.exp-grid {
-  width: 90%;
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
-  margin-bottom: 40px;
-}
-
-.exp-column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.exp-row {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.exp-item {
-  flex: 1;
-  border: 1px solid black;
-  border-radius: 15px;
-  background-color: transparent;
-  height: auto;
-  width: auto;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  margin: 10px;
-}
-
-.exp-item.large {
-  grid-column: span 2; /* Large item spans two columns */
-}
-
-.exp-item:hover {
-  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.5) !important;
-  transform: scale(1.05) !important;
-  cursor: pointer !important;
-}
-
-/* Card Content Styling */
-.card-content {
-  padding: 15px;
-  text-align: center;
-}
-
-.card-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.card-date {
-  font-size: 14px;
-  color: grey;
-  margin-bottom: 10px;
-}
-
-.card-desc {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.card-tags {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.tag {
-  background-color: #333;
+/* Dark Mode */
+body.dark-theme .exptag-primary {
+  background-color: #ff5622e0;
   color: white;
-  padding: 5px 10px;
-  margin: 5px;
-  border-radius: 5px;
-  font-size: 12px;
 }
 
-/* Dark Theme Card */
-body.dark-theme .exp-item {
-  background-color: transparent;
-  border: 1px solid white;
-  box-shadow: 2px 4px 10px rgba(255, 255, 255, 0.3);
-}
 
-body.dark-theme .exp-item:hover {
-  box-shadow: 4px 8px 20px rgba(255, 255, 255, 0.5) !important;
-  transform: scale(1.05) !important;
-  cursor: pointer !important;
-}
-
-/* Continue to Home */
-.continue-home {
+/* Links */
+.expview-cert {
+  margin-top: 12px;
   display: flex;
-  align-items: center;
-  justify-content: right;
+  justify-content: center;
+  gap: 8px;
+}
+
+.expview-cert {
+  background-color: #4486ad;
+  /* Updated Ocean Blue */
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Alegreya SC", sans-serif;
+  transition: 0.3s;
+  width: 80%;
+  margin-left: 23px;
+}
+
+.expview-cert i {
+  color: red;
+  margin-top: 3px;
+}
+
+/* Dark Mode */
+body.dark-theme .expview-cert {
+  background-color: #428581;
+  /* Updated Deep Orange */
+  color: black;
+}
+
+.expview-cert:hover {
+  background-color: #033252;
+  /* Updated Hover Color */
+  color: #fff;
+}
+
+/* Dark Mode Hover */
+body.dark-theme .expview-cert:hover {
+  background-color: #013b38;
+  /* Updated Dark Mode Hover Color */
+  color: #fff;
+}
+
+/* Continue Button */
+.continue-projects {
+  display: flex;
+  align-items: left;
+  justify-content: left;
   margin-top: 15px;
   cursor: pointer;
   position: relative;
-  margin-right:37px;
+  margin-left: 65rem;
 }
 
-.continue-home p {
+.continue-projects p {
   font-size: 1rem;
-  margin-left: 100px;
-  color: coral;
-  text-align: right;
+  color: #e74c3c;
+  /* Updated Coral Color */
+  text-align: left;
+  margin-right: 5px;
 }
 
-.continue-home .arrow-svg {
-  margin-top: 11px;
+.continue-projects .arrow-svg {
+  margin-top: 17px;
   width: 30px;
   height: 30px;
-  fill: teal;
+  fill: #1abc9c;
+  /* Updated Teal */
   animation: home-moveRight 1s infinite;
-  margin-left: 10px;
 }
 
 @keyframes home-moveRight {
@@ -185,55 +284,79 @@ body.dark-theme .exp-item:hover {
   }
 }
 
-body.dark-theme .continue-home p {
-  color: teal;
+body.dark-theme .continue-projects p {
+  color: #1abc9c;
+  /* Updated Teal */
 }
 
-body.dark-theme .continue-home .arrow-svg {
-  fill: coral;
+body.dark-theme .continue-projects .arrow-svg {
+  fill: #e74c3c;
+  /* Updated Coral */
 }
 
-/* Footer */
-.footer {
-  font-size: 0.9em;
-  text-align: center;
-  margin-top: 10px;
-  color: teal;    
-}
-
-body.dark-theme .footer {
-  color: coral;
-}
-
-/* Image Sizing */
-.cimgg {
-  width: 95%;
-  height: auto;
-  border-radius: 15px;
-  object-fit: cover;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .exp-row {
-      flex-direction: column;
-      gap: 10px;
+/* Responsive */
+@media (max-width: 1024px) {
+  .exp-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .exp-title{
-    margin-top: 60px;
-    margin-bottom: 0px;
+
+  .exp-title {
+    font-size: 35px;
+    margin-top: 50px;
+  }
+
+  .exp-column {
+    padding-bottom: 10px;
+  }
+
+  .continue-projects {
+    margin-left: 20rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .exp-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .exp-title {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  .exp-column {
+    padding-bottom: 8px;
+  }
+
+  .continue-projects {
+    margin-left: 10rem;
+  }
+
+  .exp-view-cert {
+    width: 100%;
+    margin-left: 0;
   }
 }
 
 @media (max-width: 480px) {
-  .exp-item {
-      width: 100%;
+  .exp-title {
+    font-size: 25px;
+    margin-top: 20px;
   }
-  .exp-title{
-    margin-top: 60px;
-    margin-bottom: 0px;
+
+  .exp-column {
+    padding-bottom: 5px;
+  }
+
+  .continue-projects {
+    margin-left: 5rem;
+  }
+
+  .exp-card-title {
+    font-size: 16px;
+  }
+
+  .exp-card-desc {
+    font-size: 15px;
   }
 }

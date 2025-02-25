@@ -127,7 +127,7 @@ body.dark-theme .image-container {
 
 .about-icon:hover span {
   opacity: 1;
-  transform: translateY(5px);
+  transform: translateY(3px);
 }
 
 .about-icon:hover {
@@ -151,7 +151,7 @@ body.dark-theme .about-icon i {
 
 /* Resume Button */
 .resume-download {
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .resume-download a {
@@ -334,7 +334,7 @@ body.light-theme .aboutme {
 }
 
 .about-arrow-svg {
-  margin-top: 11px;
+  margin-top: 8px;
   width: 30px;
   height: 30px;
   fill: teal;

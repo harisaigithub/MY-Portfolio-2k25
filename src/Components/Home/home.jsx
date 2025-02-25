@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
-// import ParticlesBackground from '../ParticlesBackground'; 
 import "./home.css";
 import "../../index.css";
 import { useNavigate } from "react-router-dom";
@@ -70,43 +68,6 @@ function Home() {
 
   return (
     <div className="home-container">
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Agbalumo:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Armata&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Aldrich:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
-
-      {/* <ParticlesBackground /> */}
-      
       <div className="home-content">
         <div className="home-intro-text">
           <h3
@@ -234,7 +195,7 @@ function Home() {
         style={{ fontFamily: "Alegreya SC, sans-serif" }}
         className="home-footer"
       >
-        "This template is made with ❤️ by HARI SAI PARASA © 2024 💻 (✿◕‿◕✿)"
+        "This template is made with ❤️ by HARI SAI PARASA © 2025 💻 (✿◕‿◕✿)"
       </div>
     </div>
   );

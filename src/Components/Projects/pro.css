@@ -1,212 +1,244 @@
-/* General Styling */
+/* General Container */
 .proj-container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Theme Styles */
-  body.light-theme {
-    background-color: #f0f0f0;
-    color: #000000;
-  }
-  
-  body.dark-theme {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  
-  /* Content Wrapper */
-  .proj-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 90%;
-    max-width: 1200px;
-    z-index: 1;
-  }
-  .proj-title{
-    margin-top: 7%;
-    font-size: 35px;
-    margin-left: 45%;
-  }
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  background:transparent; 
+}
 
-  body.dark-theme .proj-title{
-    color: coral;
-  }
-  /* Project Cards */
-  .proj-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-  }
-  
-  .proj-card {
-    width: 350px;
-    height: 570px;
-    background-color:transparent;
-    border-radius: 10px;
-    box-shadow: 1px 0px 8px 3px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s, background-color 0.3s;
-  }
-  
-  .proj-card:hover {
-    transform: scale(1.05);
-  }
-  
-  body.light-theme .proj-card {
-    background-color:transparent;
-    color: #000000;
-    box-shadow: 1px 0px 8px 3px rgba(0, 0, 0, 0.3);
-  }
-  
-  body.dark-theme .proj-card {
-    background-color:transparent;
-    color: #ffffff;
-    box-shadow: 1px 0px 8px 3px rgba(255, 255, 255, 0.5);
-  }
-  
-  .proj-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-  }
-  
-  .proj-details {
-    padding: 16px;
-  }
-  
-  .proj-details h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    color: coral;
-  }
-  
-  body.light-theme .proj-details h3 {
-    color: teal;
-  }
-  
-  .proj-details p {
-    font-size: 0.9rem;
-  }
-  
-  .proj-tags {
-    margin-top: 10px;
-  }
-  
-  .proj-tag {
-    display: inline-block;
-    background-color: #0077b6;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    margin: 5px 5px 0 0;
-  }
-  
-  /* Continue to Achievements */
-  .proj-continue-to-achievements {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    margin-top: 15px;
-    cursor: pointer;
-    position: relative;
-    margin-left: 80%;
-  }
-  
-  .proj-continue-to-achievements p {
-    font-size: .8rem;
-    color: coral;
-    text-align: right;
-  }
-  
-  body.dark-theme .proj-continue-to-achievements p {
-    color: teal;
-  }
-  
-  .proj-arrow-svg {
-    margin-top: 11px;
-    width: 30px;
-    height: 30px;
-    fill: teal;
-    animation: home-moveRight 1s infinite;
-    margin-left: 10px;
-  }
 
-  body.dark-theme .proj-arrow-svg{
-    fill: coral;
-  }
-  
-  @keyframes home-moveRight {
-    0% {
+
+/* Title */
+.proj-title {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Arima", sans-serif;
+  color: rgb(241, 92, 37); /* Light Theme: Navy Blue */
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Dark Mode */
+body.dark-theme .proj-title {
+  color: teal; /* Dark Theme: Soft Gold */
+}
+
+/* Project Grid */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Project Card */
+.proj-card {
+  border: 1px solid rgba(0, 0, 0, 0.288);
+  border-radius: 12px;
+  background:transparent;     
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+/* Hover Effect */
+.proj-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+/* Dark Mode */
+body.dark-theme .proj-card {
+  background:transparent; 
+  border: 1px solid rgba(255, 255, 255, 0.288);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .proj-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(189, 187, 187, 0.582);
+}
+
+/* Project Image */
+.proj-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Project Details */
+.proj-details {
+  padding: 15px;
+}
+
+/* Project Title */
+.proj-name {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Aref Ruqaa Ink", sans-serif; /* Stylish Arabic-style font */
+  color: #34495e; /* Light Theme: Dark Blue-Grey */
+}
+
+/* Dark Mode */
+body.dark-theme .proj-name {
+  color: rgba(20, 233, 248, 0.733); /* Dark Theme: Soft Gold */
+}
+
+/* Project Duration */
+.proj-duration {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Aldrich", sans-serif; /* Tech-like font for clear readability */
+  color: #0077b6; /* Light Theme: Ocean Blue */
+}
+
+/* Dark Mode */
+body.dark-theme .proj-duration {
+  color: #f39c12; /* Dark Theme: Deep Orange */
+}
+
+/* Description */
+.proj-desc {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: "Armata", sans-serif; 
+  color: #3a1c1c; /* Light Theme: Medium Gray */
+}
+
+/* Dark Mode */
+body.dark-theme .proj-desc {
+  color: #ddd; /* Dark Theme: Soft White */
+}
+
+/* Tags */
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.proj-tag {
+  background-color: #429ba7; /* Light Theme: Dark Blue */
+  color: rgb(0, 0, 0);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight:600;
+  margin: 5px;
+  font-family: "Arima", sans-serif;
+}
+
+
+/* Dark Mode */
+body.dark-theme .proj-tag {
+  background-color: #cd34db31; /* Dark Theme: Bright Blue */
+  font-weight:500;
+  color: #fff;
+}
+
+/* Links */
+.proj-links {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.proj-link {
+  background-color: #7300b68c; /* Light Theme: Ocean Blue */
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Alegreya SC", sans-serif; /* Classic, readable font */
+  transition: 0.3s;
+}
+
+/* Dark Mode */
+body.dark-theme .proj-link {
+  background-color: #f39d1279; /* Dark Theme: Deep Orange */
+  color: #fff;
+}
+
+.proj-link:hover {
+  background-color: #45016db7; /* Light Theme Hover */
+  color: #fff;
+}
+
+/* Dark Mode Hover */
+body.dark-theme .proj-link:hover {
+  background-color: #e67e22;
+  color: #000000;
+}
+
+/* Continue Button */
+.continue-ach {
+  display: flex;
+  align-items:left;
+  justify-content: left;
+  margin-top: 15px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 65rem;
+}
+
+.continue-ach p {
+  font-size: 1rem;
+  color: coral;
+  text-align:left;
+  margin-right: 5px;
+}
+
+.continue-ach .arrow-svg {
+  margin-top: 17px;
+  width: 30px;
+  height: 30px;
+  fill: teal;
+  animation: home-moveRight 1s infinite;
+}
+
+@keyframes home-moveRight {
+  0% {
       transform: translateX(0);
-    }
-    50% {
+  }
+
+  50% {
       transform: translateX(10px);
-    }
-    100% {
+  }
+
+  100% {
       transform: translateX(0);
-    }
   }
-  
-  /* Footer */
-  .proj-footer {
-    font-size: 0.9em;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: teal;
+}
+
+body.dark-theme .continue-ach p {
+  color: teal;
+}
+
+body.dark-theme .continue-ach .arrow-svg {
+  fill: coral;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .proj-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  body.light-theme .proj-footer {
-    color: teal;
+}
+
+@media (max-width: 768px) {
+  .proj-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
-  
-  body.dark-theme .proj-footer {
-    color: coral;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1180px) {
-    .proj-title{
-      margin-top: 23%;
-      margin-left: 0;
-    }
-    .proj-content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .proj-card {
-      width: 100%;
-      max-width: 350px;
-      height: auto;
-    }
-  
-    .proj-arrow-svg {
-      margin-left: 5px;
-    }
-  
-    .proj-footer {
-      font-size: 0.7em;
-    }
-    .proj-continue-to-achievements{
-      margin-left: 90px;
-  }
-  
-    .proj-continue-to-achievements p {
-      font-size: 0.9rem;
-    }
-  }
-  
+}

@@ -134,7 +134,6 @@ body.dark-theme {
   padding: 8px 8px;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
 }
 
 .hireme:hover {
@@ -148,7 +147,8 @@ body.dark-theme {
 }
 
 .dark-nav .hireme:hover {
-  border-color: coral;
+  border: 2.3px solid coral;
+  padding: 7px 7px;
 }
 
 /* Responsive Styles */

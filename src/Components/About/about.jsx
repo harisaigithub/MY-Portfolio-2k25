@@ -1,8 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-// import ParticlesBackground from "../ParticlesBackground";
 import TTIMG from "./logo11.png";
-import { Helmet } from "react-helmet";
 import "../../index.css";
 import "./about.css";
 
@@ -15,47 +13,6 @@ const About = () => {
 
   return (
     <div className="about-section-container">
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Agbalumo:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Armata&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Aldrich:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Biryani:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
-
-      {/* <ParticlesBackground /> */}
-      
       <div className="header-placeholder"></div>
       <div style={{ fontFamily: "Agbalumo, sans-serif" }} className="aboutme">
         About Me
@@ -304,7 +261,7 @@ const About = () => {
         style={{ fontFamily: "Alegreya SC, sans-serif" }}
         className="footer-note"
       >
-        "This template is made with ❤️ by HARI SAI PARASA © 2024 💻 (✿◕‿◕✿)"
+        "This template is made with ❤️ by HARI SAI PARASA © 2025 💻 (✿◕‿◕✿)"
       </div>
     </div>
   );
