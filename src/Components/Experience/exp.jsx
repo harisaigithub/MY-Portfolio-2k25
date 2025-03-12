@@ -63,7 +63,7 @@ function Experience() {
                       rel="noreferrer"
                       className="expview-cert"
                     >
-                      <i className="fa-solid fa-chevron-right fa-bounce"></i> View
+                      <i className="fa-solid fa-chevron-right fa-beat-fade"></i> View
                       Certificate
                     </a>
                   </div>

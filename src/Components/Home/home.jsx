@@ -51,7 +51,6 @@ const TypingAnimation = ({ words, delay }) => {
 };
 
 function Home() {
-  
   const navigate = useNavigate();
 
   const handleNavigate = () => {
@@ -117,7 +116,7 @@ function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-linkedin fa-shake"></i>
+                <i className="fab fa-linkedin fa-fade"></i>
                 <span>LinkedIn</span>
               </a>
               <a
@@ -126,14 +125,14 @@ function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-github fa-flip"></i>
+                <i className="fab fa-github fa-fade"></i>
                 <span>GitHub</span>
               </a>
               <a
                 className="home-icon email"
                 href="mailto:harisaiparasa@gmail.com"
               >
-                <i className="fas fa-envelope fa-shake"></i>
+                <i className="fas fa-envelope fa-fade"></i>
                 <span>Email</span>
               </a>
             </div>
@@ -162,7 +161,7 @@ function Home() {
                 rel="noopener noreferrer"
               >
                 <b>@Vasireddy Venkatadri Institute of Technology</b>
-              </a>
+              </a>{" "}
               I’m committed to pushing boundaries and staying ahead with the
               latest technologies.
             </p>

@@ -13,6 +13,7 @@ root.render(
       <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;500&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Armata&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Aldrich:wght@400;500&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@400;500&display=swap" rel="stylesheet" />

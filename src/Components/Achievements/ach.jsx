@@ -54,7 +54,7 @@ function Achievements() {
                   rel="noreferrer"
                   className="view-cert"
                 >
-                  <i class="fa-solid fa-chevron-right"></i> View Certificate
+                  <i class="fa-solid fa-chevron-right fa-beat-fade"></i> View Certificate
                 </a>
               </div>
             </div>

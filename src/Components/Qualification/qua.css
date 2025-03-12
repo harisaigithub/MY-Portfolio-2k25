@@ -1,185 +1,705 @@
-/* General Styling */
-.qua-home body {
-    margin: 0;
-    padding: 0;
+/* General Container */
+.qua-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  padding-top: 70px;
+  /* To prevent content from being hidden behind fixed title */
+}
+
+/* Title */
+.qua-title {
+  margin-top: 25px;
+  font-size: 45px;
+  font-weight: 550;
+  color: rgb(255, 87, 27);
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Wavy Underline */
+.qua-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  /* Height of the wave */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="7" viewBox="0 0 100 10"><path fill="none" stroke="%236A5ACD" stroke-width="2" d="M0 5 Q 10 0, 20 5 T 40 5 T 60 5 T 80 5 T 100 5" /></svg>');
+  background-repeat: repeat-x;
+  animation: wave 5s linear infinite;
+  /* Infinite wave animation */
+}
+
+/* Keyframes for wave animation */
+@keyframes wave {
+  0% {
+    background-position: 0 0;
   }
-  
-  body.light-theme {
-    background-color: #f0f0f0;
-    color: #000000;
+
+  100% {
+    background-position: 100% 0;
   }
-  
-  body.dark-theme {
-    background-color: #000000;
-    color: #ffffff;
+}
+
+/* Dark Mode */
+body.dark-theme .qua-title {
+  background: rgba(0, 0, 0, 0.9);
+  color: teal;
+}
+
+/* Sections */
+.skills-container,
+.Edu-container,
+.Tools-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Section Headers */
+.skill-header,
+.Edu-header,
+.Tool-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arima', sans-serif;
+}
+
+
+/* Dark Mode */
+body.dark-theme .skills-text,
+body.dark-theme .Edu-text,
+body.dark-theme .Tools-text {
+  color: coral;
+}
+
+.dot {
+  width: 11.7px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(248, 77, 15, 0.637);
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+/* Dark Mode */
+body.dark-theme .dot {
+  background-color: rgba(0, 128, 128, 0.568);
+}
+
+.small-dashed-line {
+  border-top: 2px dashed rgba(128, 128, 128, 0.527);
+  width: 5%;
+  margin: 0px 3px 9px 3px;
+}
+
+.large-dashed-line {
+  border-top: 2px dashed rgba(128, 128, 128, 0.589);
+  width: 95%;
+  margin: 0px 3px 9px 3px;
+}
+
+.skills-text,
+.Edu-text,
+.Tools-text {
+  font-size: 1.975rem;
+  color: rgb(0, 104, 104);
+  font-weight: 500;
+  text-align: left;
+  margin: 0px 0px 10px 0px;
+}
+
+.qua-content {
+  width: 95%;
+  justify-content: center;
+}
+
+/* Dropdown Styling */
+.sec-center {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  background: transparent;
+}
+
+.dropdown,
+.dropdown-sub {
+  display: none;
+}
+
+/* Dropdown Button */
+.dropdown:checked+label,
+.dropdown:not(:checked)+label {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  height: 45px;
+  transition: all 200ms linear;
+  border-radius: 4px;
+  width: 90%;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  text-align: center;
+  border: none;
+  background-color: #102670b2;
+  text-shadow: 2px 2px 8px rgba(191, 240, 150, 0.521);
+  cursor: pointer;
+  color: #ffeba7;
+  box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
+  gap: 6px;
+  padding-left: 30px;
+}
+
+.for-dropdown i {
+  margin-top: 5px;
+}
+
+/* Dark Mode */
+body.dark-theme .sec-center .dropdown:checked+label,
+body.dark-theme .sec-center .dropdown:not(:checked)+label {
+  background-color: #ffeaa7b2;
+  /* Light theme background */
+  color: #102770;
+  /* Dark theme text color */
+  box-shadow: 0 12px 35px 0 rgba(255, 235, 167, .15);
+  /* Light theme box shadow */
+}
+
+/* Dropdown Arrow */
+.dropdown:checked+.for-dropdown i {
+  transform: rotate(90deg) !important;
+  font-size: 20px;
+  transition: transform 200ms linear !important;
+}
+
+.dropdown:not(:checked)+.for-dropdown i {
+  transition: transform 200ms linear !important;
+}
+
+/* Expand Dropdown */
+.dropdown:checked~.section-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  max-height: 1000px;
+}
+
+/* Space Adjustment on Expansion */
+.dropdown:checked~.section-dropdown+.skills-container {
+  margin-top: 50px;
+}
+
+/* Section Dropdown */
+.section-dropdown {
+  /* position: absolute; */
+  padding: 5px;
+  background-color: #fff;
+  margin-top: 5px;
+  width: 90%;
+  border-radius: 4px;
+  display: block;
+  box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 300ms ease-in-out;
+  margin-left: 60px;
+  max-height: 0;
+  overflow: hidden;
+}
+
+
+/* Dark Mode */
+body.dark-theme .sec-center .section-dropdown {
+  background-color: #111;
+  /* Dark theme background */
+  box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
+  /* Dark theme box shadow */
+}
+
+/* Expand Sub Dropdown */
+.dropdown-sub:checked~.section-dropdown-sub {
+  pointer-events: auto;
+  opacity: 1;
+  max-height: 999px;
+}
+
+/* Sub-dropdown */
+.dropdown-sub:checked+label,
+.dropdown-sub:not(:checked)+label {
+  position: relative;
+  color: #102770;
+  /* Dark theme text color */
+  transition: all 200ms linear;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 2px;
+  padding: 7px 0;
+  padding-left: 20px;
+  padding-right: 15px;
+  text-align: left;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* Dark Mode */
+body.dark-theme .sec-center .section-dropdown .dropdown-sub:checked+label,
+body.dark-theme .sec-center .section-dropdown .dropdown-sub:not(:checked)+label {
+  color: #ffeba7;
+  /* Light theme text color */
+}
+
+/* Dropdown plus */
+/* Initially, the plus icon has no rotation */
+.dropdown-sub:not(:checked)+label .fa-solid {
+  transition: transform 200ms linear !important;
+}
+
+/* When the checkbox is checked, rotate the icon */
+.dropdown-sub:checked+label .fa-solid {
+  transform: rotate(135deg) !important;
+  /* Rotating the icon */
+  transition: transform 200ms linear !important;
+}
+
+/* Sub Dropdown Content */
+.section-dropdown-sub {
+  position: relative;
+  display: block;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  max-height: 0;
+  padding-left: 10px;
+  padding-right: 3px;
+  overflow: hidden;
+  transition: all 200ms linear;
+}
+
+
+.section-dropdown-sub a {
+  font-size: 14px;
+}
+
+.section-dropdown-sub a .uil {
+  font-size: 20px;
+}
+
+/* Dark Mode */
+body.dark-theme .sec-center .section-dropdown-sub a {
+  color: #102770;
+  /* Dark theme text color */
+}
+
+body.dark-theme .sec-center .section-dropdown-sub a:hover {
+  color: #102770;
+  /* Dark theme text color */
+  background-color: #ffeba7;
+  /* Light theme background color */
+}
+
+/* Degree Details */
+.degree-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  margin-left: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.151);
+  border-radius: 9px;
+  width: 90%;
+  font-family: 'Biryani', sans-serif;
+}
+
+.degree-details p {
+  margin: 6px;
+}
+
+body.dark-theme .degree-details {
+  border: 2px solid rgba(255, 255, 255, 0.151);
+}
+
+.degree-details .right,
+.degree-details .left {
+  margin-left: 20px;
+}
+
+.degree-details .left span,
+.degree-details .right span {
+  font-weight: bolder;
+}
+
+/* Vertical Line */
+.vertical-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20%;
+}
+
+.v-line {
+  width: 2px;
+  height: 50px;
+  background: repeating-linear-gradient(to bottom, #333, #333 50px, transparent 30px, transparent 33px);
+}
+
+body.dark-theme .v-line {
+  background: repeating-linear-gradient(to bottom, #76f0a996, #76f0a979 50px, transparent 30px, transparent 33px);
+}
+
+/* FontAwesome Icon */
+.fas {
+  font-size: 25px;
+  color: #007bff;
+  margin: 3px 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Keyframe Animation */
+@keyframes home-moveRight {
+  0% {
+    transform: translateX(0);
   }
-  
-  /* Qua Section Specific Styling */
-  .qua-home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+body.dark-theme .continue-exp p {
+  color: teal;
+}
+
+body.dark-theme .continue-exp .arrow-svg {
+  fill: coral;
+}
+
+
+/* Container grid setup */
+.st-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  width: 90%;
+}
+
+
+/* Skill Card styling */
+.st-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.st-card:hover {
+  filter: brightness(0.9);
+  transform: scale(1.05);
+}
+
+.st-card:active {
+  transform: scale(0.95);
+}
+
+/* Icon styling */
+.st-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Text styling */
+.st-card span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #242323;
+  font-family: 'Poppins', sans-serif;
+}
+
+body.dark-theme .st-card span {
+  color: #d8d8d8;
+}
+
+/* Hover effects */
+.st:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Continue Button */
+.continue-exp {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-top: 15px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 65rem;
+}
+
+.continue-exp p {
+  font-size: 1rem;
+  color: coral;
+  text-align: left;
+  margin-right: 5px;
+}
+
+.continue-exp .arrow-svg {
+  margin-top: 17px;
+  width: 25px;
+  height: 25px;
+  fill: teal;
+  animation: home-moveRight 1s infinite;
+}
+
+@keyframes home-moveRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+body.dark-theme .continue-exp p {
+  color: teal;
+}
+
+body.dark-theme .continue-exp .arrow-svg {
+  fill: coral;
+}
+
+/* Responsive Design */
+@media (max-width: 1180px) {
+  .qua-title {
+    font-size: 42px;
+    height: 50px;
+  }
+
+  .section-dropdown {
+    margin-left: 4.4%;
+  }
+
+  .st-container {
+    grid-template-columns: repeat(5, 1fr);
+    padding: 0.3rem;
+    width: 100%;
     justify-content: center;
-    height: 100vh;
+    margin-left: -5px;
+  }
+
+  .continue-exp {
+    margin-left: 71%;
     text-align: center;
+    margin-top: 1%;
+    margin-bottom: 2%;
   }
-  
-  .qua-home-content {
-    margin: auto;
-    padding: 20px;
+
+  .continue-exp p {
+    font-size: 0.9rem;
+    margin-bottom: 19px;
+    margin-top: 0px;
   }
-  
-  .qua-home-imgcontainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
+
+  .continue-exp .arrow-svg {
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
   }
-  
-  .qua-home-continue-to-experience {
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: background-color 0.3s ease;
+
+}
+
+@media (max-width: 768px) {
+  .qua-title {
+    font-size: 30px;
+    height: 38px;
   }
-  
-  .qua-home-continue-to-experience:hover {
-    background-color: #ff3b2e;
+
+  .skills-text,
+  .Edu-text,
+  .Tools-text {
+    font-size: 1.5rem;
   }
-  
-  .qua-home-arrow-svg {
-    fill: #ffffff;
-    transition: transform 0.3s ease;
+
+  .section-dropdown {
+    margin-left: 29.7px;
   }
-  
-  .qua-home-continue-to-experience:hover .qua-home-arrow-svg {
-    transform: translateX(5px);
+
+  .degree-details {
+    flex-direction: row;
+    width: 89%;
+    margin-left: 8px;
+    font-size: 12px;
   }
-  
-  .qua-home-footer {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #888888;
+
+  .degree-details .right {
+    margin-left: 12px;
+    text-align: left;
   }
-  
-  /* Skills Section */
-  .skills {
-    margin-top: 50px; /* Moves the Skills section down */
+
+  .degree-details .left {
+    margin-left: 5px;
+    text-align: left;
   }
-  
-  .skills__container {
-    display: grid;
-    gap: 1.5rem;
+
+  .vertical-line {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  .st-container {
     grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .skills__container-box {
-    display: flex;
-    flex-direction: column;
+    padding: 0.3rem;
+    width: 100%;
     justify-content: center;
-    align-items: center;
+    margin-left: -5px;
   }
-  
-  .skills__container-img {
-    height: 40px;
-    width: 40px;
-  }
-  
-  .skills__container-img:hover {
-    transform: rotate(25deg);
-  }
-  
-  .skills__container-name {
-    font-size: var(--smaller-font-size);
-    display: block;
+
+  .st-card {
+    width: 100%;
+    padding: 0.9rem 0.2rem;
     text-align: center;
   }
-  
-  /* Qualification Section */
-  .qualification__tabs {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: var(--mb-2);
+
+  .continue-exp {
+    margin-left: 71%;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 2%;
   }
-  
-  .qualification__button {
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
-    cursor: pointer;
+
+  .continue-exp p {
+    font-size: 0.9rem;
+    margin-bottom: 19px;
+    margin-top: 0px;
+  }
+
+  .continue-exp .arrow-svg {
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .qua-title {
+    font-size: 24px;
+    height: 34px;
+  }
+
+  .skills-text,
+  .Edu-text,
+  .Tools-text {
+    font-size: 1.5rem;
+  }
+
+  .section-dropdown {
+    margin-left: 12px;
+  }
+
+  .degree-details {
+    flex-direction: column;
+    width: 89%;
+    margin-left: 8px;
+    font-size: 12px;
+  }
+
+  .degree-details .right {
+    margin-left: -41%;
+    text-align: left;
+  }
+
+  .degree-details .left {
+    margin-left: 5px;
+    text-align: left;
+  }
+
+  .vertical-line {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    justify-content: left;
+    margin: 0px;
   }
-  
-  .qualification__button:hover {
-    color: var(--first-color);
+
+  .v-line {
+    width: 50px;
+    /* Increase the width for horizontal lines */
+    height: 2px;
+    /* Make the height smaller for horizontal lines */
+    background: repeating-linear-gradient(to right, #333, #333 50px, transparent 30px, transparent 33px);
+    margin: 0px;
   }
-  
-  .qualification__icon {
-    font-size: 1.8rem;
-    margin-right: var(--mb-0-25);
+
+  .st-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.3rem;
+    width: 100%;
+    justify-content: center;
+    margin-left: -7px;
   }
-  
-  .qualification__data {
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    column-gap: 1.5rem;
-    position: relative;
+
+  .st-card {
+    width: 100%;
+    padding: 0.3rem;
+    text-align: center;
   }
-  
-  .qualification__title {
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
+
+  .continue-exp {
+    margin-left: 152px;
+    text-align: center;
+    margin-top: -10px;
   }
-  
-  .qualification__subtitle {
-    display: inline-block;
-    font-size: var(--small-font-size);
-    margin-bottom: var(--mb-1);
+
+  .continue-exp p {
+    font-size: 0.9rem;
+    margin-bottom: 19px;
+    margin-top: 0px;
   }
-  
-  .qualification__calendar {
-    font-size: var(--smaller-font-size);
-    color: var(--text-color-light);
+
+  .continue-exp .arrow-svg {
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
   }
-  
-  .qualification__rounder {
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    background-color: var(--first-color);
-    border-radius: 50%;
-  }
-  
-  .qualification__line {
-    display: block;
-    width: 1px;
-    height: 100%;
-    background-color: var(--first-color);
-    position: absolute;
-    top: 0;
-    left: 50%; /* Center the line */
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-  
-  .qualification__data:last-child .qualification__line {
-    display: none; /* Hide the line after the last qualification */
-  }
-  
-  .qualification [data-content] {
-    display: none;
-  }
-  
-  .qualification__active[data-content] {
-    display: block;
-  }
-  
-  .qualification__button.qualification__active {
-    color: var(--first-color);
-  }
-  
+}

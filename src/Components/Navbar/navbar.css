@@ -92,7 +92,7 @@ body.dark-theme {
   border-bottom: 2px solid coral;
 }
 
-/* Mobile Hamburger Menu */
+/* Mobile burger Menu */
 #iconic {
   display: none;
   font-size: 24px;
@@ -111,7 +111,8 @@ body.dark-theme {
 /* Theme Toggle Styling */
 .theme-toggle {
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin: 10px;
   /* Made the toggle button slightly smaller */
   padding: 5px;
 }
@@ -130,8 +131,8 @@ body.dark-theme {
   cursor: pointer;
   margin-right: 5px;
   border-radius: 3em;
-  font-size: 1.2em;
-  padding: 8px 8px;
+  font-size: 1.1em;
+  padding: 7px 7px;
   font-weight: 500;
   text-decoration: none;
 }
@@ -152,17 +153,32 @@ body.dark-theme {
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 1180px) {
+
+/* Small screens (mobile devices) */
+@media screen and (max-width: 576px) {
+  .navbar {
+    padding: 0 15px;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+    margin-left: 0px;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
-    left: 0;
+    top: 50px;
+    left: -3px;
     width: 100%;
     background-color: inherit;
     text-align: right;
-    gap: 2px;
+    gap: 6px;
     padding: 1px 2px;
     z-index: 999;
   }
@@ -171,40 +187,207 @@ body.dark-theme {
     display: flex;
   }
 
+
   #iconic {
     display: block;
-    margin-right: 10px;
+    /* Ensure it's visible */
+    font-size: 22px;
+    cursor: pointer;
   }
 
-  .navbar {
-    justify-content: space-between;
+  .theme-toggle {
+    font-size: 1.2rem;
+    margin: 8px;
+    padding: 4px;
+    margin-left: -40px;
   }
 
-  .logo img {
-    width: 50px;
-    height: 50px;
-  }
-
-  /* Ensure "Hire Me" button is next to hamburger menu on mobile */
   .nbox13 {
-    width: 30%;
+    width: 15%;
     position: absolute;
-    right: 30px;
-    /* Adjust this value to move it next to the hamburger */
-    top: 30px;
-    margin-right: 0;
-    /* Reset margin */
+    right: 20px;
+    top: 20px;
   }
 
   .hireme {
+    margin-top: 5px;
+    font-size: 1em;
+    padding: 4px;
     margin-right: 20px;
-    border-radius: 3em;
-    margin-top: 6px;
-    font-size: 1.4em;
-    padding: 8px 8px;
+    margin-left: -42px;
+  }
+}
+
+/* Medium screens (tablet devices) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .navbar {
+    padding: 0 10px;
+    height: 70px;
   }
 
-  .nav-links li {
-    margin-bottom: 10px;
+  .logo img {
+    width: 55px;
+    height: 55px;
+    margin: 0px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    width: 70%;
+  }
+
+  #iconic {
+    display: none;
+    /* Ensure it's visible */
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .theme-toggle {
+    font-size: 1.3rem;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .nbox13 {
+    width: 15%;
+    right: 25px;
+    top: 25px;
+  }
+
+  .hireme {
+    font-size: 1em;
+    padding: 4px;
+    margin-left: -1px;
+  }
+
+}
+
+/* Large screens (laptop and smaller desktops) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0 20px;
+    height: 80px;
+  }
+
+  .logo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  #iconic {
+    display: none;
+    /* Ensure it's visible */
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  .theme-toggle {
+    font-size: 1.4rem;
+    margin: 12px;
+    padding: 6px;
+  }
+
+  .nbox13 {
+    width: 15%;
+    right: 30px;
+    top: 30px;
+  }
+
+  .hireme {
+    font-size: 1.2em;
+    padding: 8px 8px;
+  }
+}
+
+/* Extra Large screens (larger laptops and desktops) */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .navbar {
+    padding: 0 30px;
+    height: 90px;
+  }
+
+  .logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .nav-links {
+    gap: 20px;
+    width: 60%;
+  }
+
+  #iconic {
+    display: none;
+    /* Ensure it's visible */
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .theme-toggle {
+    font-size: 1.5rem;
+    margin-right: 45px;
+    padding: 7px;
+  }
+
+  .nbox13 {
+    width: 10%;
+    position: absolute;
+    right: 15px;
+    top: 35px;
+  }
+
+  .hireme {
+    font-size: 1.3em;
+    padding: 9px 9px;
+  }
+}
+
+/* 4K screens */
+@media screen and (min-width: 2560px) {
+  .navbar {
+    padding: 0 40px;
+    height: 150px;
+  }
+
+  .logo img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .nav-links a {
+    font-size: 2.5rem;
+  }
+
+  #iconic {
+    display: none;
+    /* Ensure it's visible */
+    font-size: 32px;
+    cursor: pointer;
+  }
+
+  .theme-toggle {
+    font-size: 2.5rem;
+    margin: 16px;
+    padding: 8px;
+  }
+
+  .nbox13 {
+    width: 15%;
+    right: 40px;
+    top: 40px;
+  }
+
+  .hireme {
+    font-size: 2.5rem;
+    padding: 10px 10px;
   }
 }

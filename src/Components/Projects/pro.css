@@ -11,8 +11,6 @@
   background:transparent; 
 }
 
-
-
 /* Title */
 .proj-title {
   font-size: 45px;
@@ -21,12 +19,40 @@
   color: rgb(241, 92, 37); /* Light Theme: Navy Blue */
   text-align: center;
   margin-top: 100px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;  /* Adjust the space between the text and the underline */
+}
+
+/* Wavy Underline */
+.proj-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;/* Height of the wave */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="7" viewBox="0 0 100 10"><path fill="none" stroke="%236A5ACD" stroke-width="2" d="M0 5 Q 10 0, 20 5 T 40 5 T 60 5 T 80 5 T 100 5" /></svg>');
+  background-repeat: repeat-x;
+  animation: wave 3s linear infinite; /* Infinite wave animation */
+}
+
+
+/* Keyframes for wave animation */
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 /* Dark Mode */
 body.dark-theme .proj-title {
   color: teal; /* Dark Theme: Soft Gold */
 }
+
 
 /* Project Grid */
 .proj-grid {
@@ -41,19 +67,36 @@ body.dark-theme .proj-title {
 
 /* Project Card */
 .proj-card {
-  border: 1px solid rgba(0, 0, 0, 0.288);
+  border: 1px solid black;
   border-radius: 12px;
-  background:transparent;     
+  background-color: transparent; /* Make the background transparent */
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
   text-align: center;
   padding-bottom: 15px;
+  z-index: 1;
+  position: relative;
 }
 
-/* Hover Effect */
+/* Add background blur */
+.proj-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent overlay */
+  backdrop-filter: blur(2px); /* Apply the blur effect */
+  z-index: -1; /* Put it behind the content */
+  border-radius: 12px; /* Ensure the border radius matches the card */
+}
+
+/* Hover effect */
 .proj-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Dark Mode */
@@ -232,13 +275,192 @@ body.dark-theme .continue-ach .arrow-svg {
 
 /* Responsive */
 @media (max-width: 1024px) {
+  .proj-container{
+    justify-content:center;
+    width:100%;
+    overflow: hidden;
+  }
+
+  .proj-card{
+    justify-content:center;
+    width:100%;
+    margin-top: -18px;
+  }
+
+  .proj-title {
+    font-size: 40px;
+    height:72px;
+    margin-top: 80px;
+  }
+
+  .proj-grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+  }
+  .proj-card {
+    padding-bottom: 5px;
+  }
+
+  .continue-experiences {
+    margin-left: 5rem;
+  }
+
+  .proj-name {
+    font-size: 14px;
+        margin: 0;
+  }
+
+  .proj-desc {
+    font-size: 15px;
+  }
+
+
+  .continue-ach {
+    margin-left: 72%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .continue-ach p {
+    font-size: 0.9rem;
+    margin-bottom: 19px;
+    margin-top: 0px;
+  }
+
+  .continue-ach .arrow-svg {
+    margin-top: -1px;
+    width: 26px;
+    height: 18px;
+  }
+
+  .home-footer {
+    font-size: 0.8em;
+    width: 90%;
+    text-align: center;
+    bottom: 62px;
+    color: teal;
+    position: absolute;
+}
+}
+
+
+@media (max-width: 768px)  {
+  .proj-container{
+    justify-content:center;
+    width:100%;
+    overflow: hidden;
+  }
+
+  .proj-card{
+    justify-content:center;
+    width:100%;
+    margin-top: -18px;
+  }
+
+  .proj-title {
+    font-size: 35px;
+    height:69px;
+    margin-top: 70px;
+  }
+
   .proj-grid {
     grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+  }
+  .proj-card {
+    padding-bottom: 5px;
+  }
+
+  .continue-experiences {
+    margin-left: 5rem;
+  }
+
+  .proj-name {
+    font-size: 14px;
+        margin: 0;
+  }
+
+  .proj-desc {
+    font-size: 15px;
+  }
+  
+  .continue-ach {
+    margin-left: 62%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .continue-ach p {
+    font-size: 0.9rem;
+    margin-bottom: 19px;
+    margin-top: 0px;
+  }
+
+  .continue-ach .arrow-svg {
+    margin-top: -1px;
+    width: 25px;
+    height: 18px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  .proj-container{
+    justify-content:center;
+    width:100%;
+    overflow: hidden;
+  }
+
+  .proj-card{
+    justify-content:center;
+    width:100%;
+    margin-top: -18px;
+  }
+
+  .proj-title {
+    font-size: 35px;
+    height:69px;
+    margin-top: 70px;
+  }
+
   .proj-grid {
     grid-template-columns: repeat(1, 1fr);
+    width: fit-content;
   }
+  .proj-card {
+    padding-bottom: 5px;
+  }
+
+  .continue-experiences {
+    margin-left: 5rem;
+  }
+
+  .proj-name {
+    font-size: 20px;
+        margin: 0;
+  }
+
+  .proj-desc {
+    font-size: 15px;
+  }
+  
+  .continue-ach {
+    margin-left: 37%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .continue-ach p {
+    font-size: 0.9rem;
+    margin-bottom: 19px;
+    margin-top: 0px;
+  }
+
+  .continue-ach .arrow-svg {
+    margin-top: -1px;
+    width: 25px;
+    height: 18px;
+  }
+  .home-footer{
+  font-size: 0.7em;
+}
 }

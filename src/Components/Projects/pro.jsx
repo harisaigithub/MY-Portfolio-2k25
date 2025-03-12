@@ -50,7 +50,7 @@ function Projects() {
                       rel="noreferrer"
                       className="proj-link"
                     >
-                      <i className="fa-regular fa-eye"></i> Live Project
+                      <i className="fa-regular fa-eye fa-beat-fade"></i> Live Project
                     </a>
                   )}
                   <a
@@ -59,7 +59,7 @@ function Projects() {
                     rel="noreferrer"
                     className="proj-link"
                   >
-                    <i className="fa-brands fa-github"></i> GitHub Repository
+                    <i className="fa-brands fa-github "></i> GitHub Repository
                   </a>
                 </div>
               </div>

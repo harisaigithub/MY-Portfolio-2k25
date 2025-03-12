@@ -6,6 +6,7 @@ import MSAAI from "./images/microsoft_azure_ai.jpg";
 import AWSFound from "./images/aws-academy-cloud foundations.png";
 import AWSArc from "./images/AWS Academy Cloud Architecting.png";
 import AWSWEBAPPBuilder from "./images/AWS_Academy_Cloud_Web_Application_Builder.png";
+import AwsDE from "./images/AWS_Academy_data engineering.png";
 import Cisco from "./images/cisco_it_essentials.jpg";
 import Edx1 from "./images/edx_predictive_analytics.png";
 import Edx2 from "./images/AWS-OTP-AWSD15 AWS Cloud Practitioner Essentials edx 2.png";
@@ -15,7 +16,10 @@ import GCPP from "./images/gcp_badge.png";
 import GCDP from "./images/developer-profile-share.png";
 import MSP from "./images/microsoft profile bages.png";
 import SFP from "./images/salesforce profile bages.png";
+import CRD1 from "./images/credly1.png";
+import CRD2 from "./images/credly2.png";
 import MongoDB from "./images/mongodb.jpg";
+import MongoDB2 from "./images/MongoDB2.png";
 import Co4 from "./images/palo-alto-networks.jpg";
 import CO6 from "./images/Fortinet.jpg";
 import CO7 from "./images/juniper networks.jpg";
@@ -161,6 +165,24 @@ const certifications = [
     ],
     img: AWSWEBAPPBuilder,
     link: "https://vvitguntur-my.sharepoint.com/:b:/g/personal/22bq5a4213_vvit_net/EWpjNRQe-YFBpE9evhWi2AoBXf4xT9QjPHD4qKTpFhi33Q?e=fvSC4a",
+  },
+
+  {
+    title: "AWS Academy Graduate - AWS Academy Data Engineering",
+    org: "AWS Academy",
+    validity: "Lifetime",
+    desc: "Completed 40 hours of training in data engineering on the AWS platform, covering data pipelines, ETL processes, data analytics, and AWS data services.",
+    tags: [
+      "GLOBAL CERTIFICATION",
+      "AWS",
+      "Data Engineering",
+      "ETL",
+      "Data Analytics",
+      "AWS Academy",
+      "Cloud Computing",
+    ],
+    img: AwsDE,
+    link: "https://www.credly.com/go/OVYLTen8",
   },
 
   {
@@ -320,6 +342,46 @@ const certifications = [
   },
 
   {
+    title: "Credly Badges",
+    org: "Credly",
+    validity: "Lifetime",
+    desc: "Collection of Credly badges earned by PARASA HARI SAI, showcasing expertise in cloud engineering, data analytics, AI, MongoDB, and application development.",
+    tags: [
+      "BADGES",
+      "Credly",
+      "Cloud Engineering",
+      "Data Analytics",
+      "AI",
+      "MongoDB",
+      "Application Development",
+      "Cloud Architecture",
+      "Business Relationship Management (BRM)",
+      "Artificial Intelligence",
+    ],
+    img: CRD1,
+    link: "https://www.credly.com/users/parasa-hari-sai/badges",
+  },
+  {
+    title: "Credly Badges",
+    org: "Credly",
+    validity: "Lifetime",
+    desc: "Collection of Credly badges earned by HARI SAI P, showcasing expertise in cybersecurity, cloud foundations, web application building, cloud architecting, and data engineering.",
+    tags: [
+      "BADGES",
+      "Credly",
+      "Cybersecurity",
+      "Fortinet",
+      "AWS",
+      "Cloud Foundations",
+      "Web Application Builder",
+      "Cloud Architecting",
+      "Data Engineering"
+    ],
+    img: CRD2,
+    link: "https://www.credly.com/users/hari-sai-p/badges",
+},
+
+  {
     title: "Introduction to MongoDB for Students",
     org: "MongoDB",
     validity: "Lifetime",
@@ -335,6 +397,23 @@ const certifications = [
     img: MongoDB,
     link: "https://vvitguntur-my.sharepoint.com/:b:/g/personal/22bq5a4213_vvit_net/EY_1HYYAaoVFlm7_AK8nav8B85tNdL5oGI0l8zrqMOZh1g?e=GdbcE8",
   },
+
+  {
+    title: "MongoDB Data Modeling Skills for Developers",
+    org: "MongoDB",
+    validity: "Lifetime",
+    desc: "Earned by successfully completing the MongoDB Data Modeling Skills for Developers course, demonstrating proficiency in designing efficient and scalable data models using MongoDB's document-oriented approach.",
+    tags: [
+        "PROFESSIONAL CERTIFICATE",
+        "MongoDB",
+        "Data Modeling",
+        "NoSQL",
+        "Database Design",
+        "Backend Development"
+    ],
+    img: MongoDB2,
+    link: "https://vvitguntur-my.sharepoint.com/:f:/g/personal/22bq5a4213_vvit_net/EjcThsWEsIlJhsq71IAJh5cBpdFycwtGGqvSjApT7NmBxQ?e=4XzsNs"
+},
 
   {
     title: "Palo Alto Networks Cybersecurity Fundamentals",

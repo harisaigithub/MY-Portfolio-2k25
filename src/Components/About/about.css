@@ -112,8 +112,8 @@ body.dark-theme .image-container {
 
 .about-icon span {
   position: absolute;
-  top:55px;
-  left:10px;
+  top: 55px;
+  left: 10px;
   opacity: 0;
   padding: 0px 10px;
   background-color: rgba(0, 0, 0, 0.6);
@@ -205,8 +205,38 @@ h2 {
 
 .aboutme {
   color: coral;
+  position: relative;
+  display: inline-block;
   /* Teal for light theme */
 }
+
+/* Wavy Underline */
+.aboutme::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  /* Height of the wave */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="10" viewBox="0 0 100 10"><path fill="none" stroke="%236A5ACD" stroke-width="1.5" d="M0 5 Q 10 0, 20 5 T 40 5 T 60 5 T 80 5 T 100 5" /></svg>');
+  background-repeat: repeat-x;
+  animation: wave 3.5s linear infinite;
+  /* Infinite wave animation */
+}
+
+
+/* Keyframes for wave animation */
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 
 .intro-text h2 {
   color: teal;
@@ -329,7 +359,7 @@ body.light-theme .aboutme {
 .about-continue-to-Qualification p {
   font-size: 1rem;
   margin-left: 100px;
-  color:coral;
+  color: coral;
   text-align: right;
 }
 
@@ -388,7 +418,7 @@ body.dark-theme .intro-text i {
     text-align: center;
   }
 
-  .aboutme{
+  .aboutme {
     margin-top: 20%;
   }
 
@@ -416,7 +446,7 @@ body.dark-theme .intro-text i {
 
   .about-adjust section p,
   b {
-    font-size: .7em;
+    font-size: 1em;
     margin: 0;
   }
 
@@ -428,15 +458,29 @@ body.dark-theme .intro-text i {
     margin-left: 40%;
     margin-right: 0;
   }
+
   .about-continue-to-Qualification p {
     font-size: 0.8em;
     margin: 0%;
   }
-  
+
   .about-arrow-svg {
     margin-top: 7px;
     font-size: 0.6em;
-   width: 30px;
-   height: 30px;
+    width: 30px;
+    height: 30px;
   }
 }
+
+@media screen and (min-width: 577px) and (max-width: 768px){
+  .aboutme {
+    margin-top: 10%;
+}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  .aboutme {
+    margin-top: 10%;
+}
+}
+

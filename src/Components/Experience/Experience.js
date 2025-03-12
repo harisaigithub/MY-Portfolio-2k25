@@ -1,6 +1,7 @@
 import SDI from "./images/SDI.png";
 import EHC10 from "./images/EHC10.jpg";
 import JFSDIC09 from "./images/JFSDIC09.jpg";
+import c11 from "./images/c11.png";
 import JNVI from "./images/JNVI.jpg";
 import CVIC from "./images/CVIC.jpg";
 import CSCSVIC from "./images/CSCSVIC.png";
@@ -65,6 +66,24 @@ const experience = [
     ],
     img: JFSDIC09,
     link: "https://vvitguntur-my.sharepoint.com/:b:/g/personal/22bq5a4213_vvit_net/EW_YprbrR71Gpm4SKRfWq4QBHJPtnhW7bejqPVj8Dv0yKA?e=pjWlnn",
+  },
+
+  {
+    title: "AWS Data Engineering Virtual Internship",
+    org: "AICTE & EduSkills",
+    date: "January - March 2025",
+    desc: "Successfully completed a 10-week Data Engineering Virtual Internship provided by AICTE and EduSkills, with curriculum by AWS Academy. Gained valuable skills in data engineering, leveraging AWS tools and technologies.",
+    tags: [
+      "AWS_Data_Engineering",
+      "AICTE",
+      "EduSkills",
+      "AWS Academy",
+      "Data Engineering",
+      "Virtual Internship",
+      "Learning & Growth",
+    ],
+    img: c11,
+    link: "https://vvitguntur-my.sharepoint.com/:b:/g/personal/22bq5a4213_vvit_net/EdOquV761ypKqT58ZBikTbIBtqxQkbsawDNXlcdj_DMyIQ?e=EILJuZ",
   },
 
   {

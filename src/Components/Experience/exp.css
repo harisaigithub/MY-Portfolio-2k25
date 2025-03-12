@@ -14,14 +14,44 @@
 /* Title */
 .exp-title {
   font-size: 45px;
-  font-weight:500;
+  font-weight: 500;
   font-family: "Eczar", serif;
   /* Updated font */
-  color:  rgb(241, 92, 37);
+  color: rgb(241, 92, 37);
   /* Updated Light Theme Color */
+  position: relative;
+  display: inline-block;
   text-align: center;
   margin-top: 100px;
 }
+
+/* Wavy Underline */
+.exp-title::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  /* Height of the wave */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="9" viewBox="0 0 100 10"><path fill="none" stroke="%236A5ACD" stroke-width="2" d="M0 5 Q 10 0, 20 5 T 40 5 T 60 5 T 80 5 T 100 5" /></svg>');
+  background-repeat: repeat-x;
+  animation: wave 4s linear infinite;
+  /* Infinite wave animation */
+}
+
+
+/* Keyframes for wave animation */
+@keyframes wave {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 
 /* Dark Mode */
 body.dark-theme .exp-title {
@@ -29,7 +59,7 @@ body.dark-theme .exp-title {
   /* Keeping original color */
 }
 
-/* Project Grid */
+/* Experience Grid */
 .exp-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -40,21 +70,43 @@ body.dark-theme .exp-title {
   padding: 20px;
 }
 
-/* Project Card */
+/* Experience Card */
 .exp-column {
-  border: 1px solid rgba(0, 0, 0, 0.288);
+  border: 1px solid black;
   border-radius: 12px;
-  background: transparent;
+  background-color: transparent;
+  /* Make the background transparent */
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
   text-align: center;
   padding-bottom: 15px;
+  z-index: 1;
+  position: relative;
 }
 
-/* Hover Effect */
+/* Add background blur */
+.exp-column::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Semi-transparent overlay */
+  backdrop-filter: blur(2px);
+  /* Apply the blur effect */
+  z-index: -1;
+  /* Put it behind the content */
+  border-radius: 12px;
+  /* Ensure the border radius matches the card */
+}
+
+/* Hover effect */
 .exp-column:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Dark Mode */
@@ -69,19 +121,19 @@ body.dark-theme .exp-column:hover {
   box-shadow: 0 4px 8px rgba(189, 187, 187, 0.582);
 }
 
-/* Project Image */
+/* Experience Image */
 .img {
   width: 100%;
   height: auto;
   border-radius: 12px 12px 0 0;
 }
 
-/* Project Details */
+/* Experience Details */
 .exp-card-content {
   padding: 15px;
 }
 
-/* Project Title */
+/* Experience Title */
 .exp-card-title {
   font-size: 18px;
   font-weight: 500;
@@ -97,7 +149,7 @@ body.dark-theme .exp-card-title {
   /* Keeping original color */
 }
 
-/* Project Duration */
+/* Experience Duration */
 .exp-card-date {
   font-size: 14px;
   font-weight: bold;
@@ -296,67 +348,191 @@ body.dark-theme .continue-projects .arrow-svg {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .exp-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .exp-title {
-    font-size: 35px;
-    margin-top: 50px;
-  }
-
-  .exp-column {
-    padding-bottom: 10px;
-  }
-
-  .continue-projects {
-    margin-left: 20rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .exp-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .exp-title {
-    font-size: 30px;
-    margin-top: 30px;
-  }
-
-  .exp-column {
-    padding-bottom: 8px;
-  }
-
-  .continue-projects {
-    margin-left: 10rem;
-  }
-
-  .exp-view-cert {
+  .exp-container {
+    justify-content: center;
     width: 100%;
-    margin-left: 0;
+    overflow: hidden;
   }
-}
 
-@media (max-width: 480px) {
+  .exp-content {
+    justify-content: center;
+    width: 100%;
+    margin-top: -18px;
+  }
+
   .exp-title {
-    font-size: 25px;
-    margin-top: 20px;
+    font-size: 40px;
+    height: 72px;
+    margin-top: 80px;
+  }
+
+  .exp-grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
   }
 
   .exp-column {
     padding-bottom: 5px;
   }
 
-  .continue-projects {
+  .continue-experiences {
     margin-left: 5rem;
   }
 
   .exp-card-title {
-    font-size: 16px;
+    font-size: 14px;
+    margin: 0;
   }
 
   .exp-card-desc {
     font-size: 15px;
+  }
+
+  .continue-projects {
+    margin-left: 77%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .continue-projects p {
+    font-size: 0.9rem;
+    margin-bottom: 19px;
+    margin-top: 0px;
+  }
+
+  .continue-projects .arrow-svg {
+    margin-top: -1px;
+    width: 48px;
+    height: 18px;
+  }
+
+  .home-footer {
+    font-size: 0.8em;
+    width: 90%;
+    text-align: center;
+    bottom: 62px;
+    color: teal;
+    position: absolute;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .exp-container {
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .exp-content {
+    justify-content: center;
+    width: 100%;
+    margin-top: -18px;
+  }
+
+  .exp-title {
+    font-size: 35px;
+    height: 69px;
+    margin-top: 70px;
+  }
+
+  .exp-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+  }
+
+  .exp-column {
+    padding-bottom: 5px;
+  }
+
+  .continue-experiences {
+    margin-left: 5rem;
+  }
+
+  .exp-card-title {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .exp-card-desc {
+    font-size: 15px;
+  }
+
+  .continue-projects {
+    margin-left: 69%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .continue-projects p {
+    font-size: 0.9rem;
+    margin-bottom: 19px;
+    margin-top: 0px;
+  }
+
+  .continue-projects .arrow-svg {
+    margin-top: -1px;
+    width: 48px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .exp-container {
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .exp-content {
+    justify-content: center;
+    width: 100%;
+    margin-top: -18px;
+  }
+
+  .exp-title {
+    font-size: 35px;
+    height: 69px;
+    margin-top: 70px;
+  }
+
+  .exp-grid {
+    grid-template-columns: repeat(1, 1fr);
+    width: fit-content;
+  }
+
+  .exp-column {
+    padding-bottom: 5px;
+  }
+
+  .continue-experiences {
+    margin-left: 5rem;
+  }
+
+  .exp-card-title {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .exp-card-desc {
+    font-size: 15px;
+  }
+
+  .continue-projects {
+    margin-left: 132px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .continue-projects p {
+    font-size: 0.9rem;
+    margin-bottom: 19px;
+    margin-top: 0px;
+  }
+
+  .continue-projects .arrow-svg {
+    margin-top: -1px;
+    width: 48px;
+    height: 18px;
   }
 }
