@@ -89,8 +89,7 @@ This README is for version 1.0.0, showcasing the basic structure and functionali
 ## Demo
 
 - Demo:
-  ![Demo Video]
-https://github.com/user-attachments/assets/c0c7e750-3730-45ad-bac8-2de180b9ab49
+  ![Demo Video](https://github.com/user-attachments/assets/c0c7e750-3730-45ad-bac8-2de180b9ab49)
 
 
 ## Hosting Link
