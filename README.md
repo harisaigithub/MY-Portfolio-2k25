@@ -85,12 +85,14 @@ This README is for version 1.0.0, showcasing the basic structure and functionali
   ![lightach](https://github.com/user-attachments/assets/1dfa6682-40e9-4333-a884-f9d7d6145ffe)
   ![darkach](https://github.com/user-attachments/assets/ad4be1da-0365-4763-b816-b961bbc8978d)
   
-
+---
 ## Demo
 
 - Demo:
+
 https://github.com/user-attachments/assets/c0c7e750-3730-45ad-bac8-2de180b9ab49
 
+---
 
 ## Hosting Link
 
