@@ -1,4 +1,4 @@
-![darkqua](https://github.com/user-attachments/assets/752d1570-658a-4daa-8c7d-74430dc7e2a6)# Personal Portfolio - Hari Sai Parasa
+# Personal Portfolio - Hari Sai Parasa
 
 ## About
 
