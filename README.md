@@ -1,4 +1,4 @@
-# Personal Portfolio - Hari Sai Parasa
+![darkqua](https://github.com/user-attachments/assets/752d1570-658a-4daa-8c7d-74430dc7e2a6)# Personal Portfolio - Hari Sai Parasa
 
 ## About
 
@@ -56,28 +56,42 @@ This README is for version 1.0.0, showcasing the basic structure and functionali
 ## Screenshots
 
 - Home Page:
-  ![Home Page Screenshot](./assets/home-screenshot.png)
+  ![Home Page Screenshot]
+  ![lighthome](https://github.com/user-attachments/assets/9a8901cc-7e5f-405a-8e20-abdbc9362de4)
+  ![darkhome](https://github.com/user-attachments/assets/442cc84d-7f72-40f8-a554-ea7973502b9c)
   
 - About Me Section:
-  ![About Me Screenshot](./assets/about-screenshot.png)
+  ![About Me Screenshot]
+  ![lightabout](https://github.com/user-attachments/assets/38e18505-2166-4546-98a9-8ff6b4a9ffe6)
+  ![darkabout](https://github.com/user-attachments/assets/593c2b34-a876-4718-bf77-afa7a8628f17)
 
 - Qualifications Section:
-  ![Qualifications Screenshot](./assets/projects-screenshot.png)
+  ![Qualifications Screenshot]
+  ![lightqua](https://github.com/user-attachments/assets/8d5af4a8-c7f3-4b1b-8e0a-7b406683c318)
+  ![darkqua](https://github.com/user-attachments/assets/f0d33a68-9179-4e48-94cd-c9fe867a55c6)
 
 - Projects Section:
-  ![Projects Screenshot](./assets/projects-screenshot.png)
+  ![Projects Screenshot]
+  ![lightproj](https://github.com/user-attachments/assets/95137d21-ed60-4412-9d92-c4db179751c1)
+  ![darkproj](https://github.com/user-attachments/assets/35003762-196a-450b-9b77-abb6994251aa)
 
 - Experience Section:
-  ![Experience Screenshot](./assets/projects-screenshot.png)
+  ![Experience Screenshot]
+  ![lightexp](https://github.com/user-attachments/assets/8b677e83-2342-40da-af7b-02e5900afd97)
+  ![darkexp](https://github.com/user-attachments/assets/53a76874-9794-4d2c-8b82-145ce8e6eae4)
 
 - Achievements Section:
-  ![Achievements Screenshot](./assets/projects-screenshot.png)
-
+  ![Achievements Screenshot]
+  ![lightach](https://github.com/user-attachments/assets/1dfa6682-40e9-4333-a884-f9d7d6145ffe)
+  ![darkach](https://github.com/user-attachments/assets/ad4be1da-0365-4763-b816-b961bbc8978d)
+  
 
 ## Demo
 
 - Demo:
-  ![Demo Video](./assets/home-screenshot.png)
+  ![Demo Video]
+https://github.com/user-attachments/assets/c0c7e750-3730-45ad-bac8-2de180b9ab49
+
 
 ## Hosting Link
 
