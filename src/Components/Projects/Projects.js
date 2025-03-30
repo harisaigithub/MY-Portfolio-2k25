@@ -17,7 +17,7 @@ import AndroidStudioImg from "./images/android_studio.png";
 import CodSoftFreelancersImg from "./images/codsoft_freelancers.png";
 import CodSoftPortfolioImg from "./images/codsoft_portfolio.png";
 import JavaPortfolioImg from "./images/java_portfolio.png";
-import DrainageSystemMonitoringImg from "./images/"
+import DrainageSystemMonitoringImg from "./images/DrainageSystemMonitoringImg.png"
 const projects = [
   // 1️⃣ CourseWhiz (AI-Powered Course Recommendation)
   {
