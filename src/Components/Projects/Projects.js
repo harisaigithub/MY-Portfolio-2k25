@@ -17,7 +17,7 @@ import AndroidStudioImg from "./images/android_studio.png";
 import CodSoftFreelancersImg from "./images/codsoft_freelancers.png";
 import CodSoftPortfolioImg from "./images/codsoft_portfolio.png";
 import JavaPortfolioImg from "./images/java_portfolio.png";
-
+import DrainageSystemMonitoringImg from "./images/"
 const projects = [
   // 1️⃣ CourseWhiz (AI-Powered Course Recommendation)
   {
@@ -95,7 +95,16 @@ const projects = [
       "https://github.com/harisaigithub/CodeAlpha/tree/main/TASK-2/2.2-Stock%20Trading%20Platform",
     img: StockTradingImg,
   },
-
+// 1️⃣ Drainage System Monitoring
+{
+  title: "Drainage System Monitoring",
+  duration: "March 2025",
+  desc: "A community-driven initiative for efficient drainage system management, featuring rainfall-based capacity calculation and issue reporting.",
+  tags: ["Community Service","HTML", "CSS", "JavaScript", "Chart.js", "Google Forms" ],
+  liveLink: "https://drainage-system-monitoring.netlify.app/",
+  github: "https://github.com/harisaigithub/Drainage_System_Monitoring",
+  img: DrainageSystemMonitoringImg,
+},
   // 6️⃣ Flipkart Clone (E-Commerce Frontend)
   {
     title: "Flipkart Clone",

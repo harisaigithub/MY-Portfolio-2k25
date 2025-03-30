@@ -47,7 +47,7 @@ import ssdc1 from "./images/apssdcdjangp.jpg";
 import ssdc2 from "./images/apssdcandroidworkshop.png";
 import cid from "./images/cid_investigation.png";
 import acm from "./images/acm_Spardha.jpg";
-
+import KraftPixelPCAT from "./images/PTE.png"
 const certifications = [
   // Global Certifications – 5
   {
@@ -272,7 +272,23 @@ const certifications = [
     img: IBM,
     link: "https://vvitguntur-my.sharepoint.com/:b:/g/personal/22bq5a4213_vvit_net/EQTqtaPxr_pFqEeDhYPB2p8BWi1y767eRc54nObRjjONvg?e=p9JD6G",
   },
-
+  {
+    title: "Preliminary Candidate Assessment Test (PCAT)",
+    org: "KraftPixel",
+    validity: "March 2025 - March 2028",
+    desc: "Successfully cleared the PCAT (Preliminary Candidate Assessment Test) by KraftPixel, a selective screening test with a pass rate of only 10-15%, recognizing adaptability, continuous learning, and tech proficiency.",
+    tags: [
+      "Digital Badge",
+      "Tech Excellence",
+      "KraftPixel",
+      "PCAT",
+      "Career Growth",
+      "Adaptability",
+      "Subject Matter Expert"
+    ],
+    link: "https://www.sertifier.com/verify", // Replace with actual verification link if available
+    img: KraftPixelPCAT, // Replace with actual image/badge import
+  },
   {
     title: "Google Cloud Skill Badges",
     org: "Google Cloud",
